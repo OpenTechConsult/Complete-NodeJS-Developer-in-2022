@@ -10,11 +10,11 @@ When Node.js execute an asynchronous functions (e.g. `setTimeout` or our file sy
 
 As we learned this operation is executed in the operating system (OS) or on the thread pool. When that operation finishes and the result is ready, Node.js places any callback function that it needs to run for that operation onto a queue.
 
-Example: Say that our asynchronous operation is this setTimeout that wait for one second before attempting to call a callback the we're going to call **callbackOne**
+Example: Say that our asynchronous operation is this `setTimeout` that wait for one second before attempting to call a callback that we're going to call **callbackOne**
 
 > `setTimeout(callbackOne, 1000)`
 
-What happens is that when the timer expires (when one second has passed) our callback added to the queue to be executed as soon as possible.
+What happens is that when the timer expires (when one second has passed) our callback is added to the queue to be executed as soon as possible.
 
 This is true for any callback that you set to be run when some asynchronous operation completes. This callbacks are put in a something called **`callback queue`**.
 
