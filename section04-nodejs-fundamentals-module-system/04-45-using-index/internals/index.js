@@ -1,4 +1,8 @@
+const request = require('./request.js')
+const response = require('./response.js')
+
 module.exports = {
-    request: require('./request.js'),
-    response: require('./response.js')
+    REQUEST_TIMEOUT: request.REQUEST_TIMEOUT,
+    send: request.send,
+    read: response.read,
 }

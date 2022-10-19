@@ -1,9 +1,9 @@
-const internals = require('./internals')
+const {send, read} = require('./internals')
 
 
 function makeRequest(url, data) {
-    internals.request.send(url, data)
-    return internals.response.read()
+    send(url, data)
+    return read()
 }
 
 makeRequest('http://google.com', 'hello')
